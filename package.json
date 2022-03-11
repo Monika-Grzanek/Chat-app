@@ -1,0 +1,16 @@
+{
+  "name": "Chat-app",
+  "version": "1.0.0",
+  "main": "app.js",
+  "repository": "git@github.com:Monika-Grzanek/Chat-app.git",
+  "author": "Monika Grzanek <monski@o2.pl>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.3",
+    "nodemon": "^2.0.15",
+    "sass": "^1.49.9"
+  },
+  "scripts": {
+    "start": "nodemon server.js"
+  }
+}
