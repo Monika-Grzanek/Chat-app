@@ -12,16 +12,15 @@ let userName;
 
 function login(event) {
     event.preventDefault();
-    if(userNameInput){
-        userName = userNameInput.value;
-        loginForm.classList.add('show');
-        messagesSection.classList.remove('show');
-    } else {
+    userName = userNameInput.value;
+    if(!userName.length){
         alert('You must enter your name!')
+    } else {
+        loginForm.classList.remove('show');
+        messagesSection.classList.add('show');
     }
 };
 
-let msg = messageContentInput.value;
 
 function sendMessage(event) {
     event.preventDefault();
