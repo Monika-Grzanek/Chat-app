@@ -1,5 +1,6 @@
 const socket = io();
 socket.on('message', ({ author, content }) => addMessage(author, content));
+socket.on('join', ({nameUser, idUser}) => login(nameUser, idUser));
 
 const loginForm = document.getElementById('welcome-form');
 const messagesSection = document.getElementById('messages-section');
@@ -18,6 +19,7 @@ function login(event) {
     } else {
         loginForm.classList.remove('show');
         messagesSection.classList.add('show');
+        socket.emit('join', {nameUser: userName, idUser: socket.id})
     }
 };
 

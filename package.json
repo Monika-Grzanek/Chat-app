@@ -8,7 +8,8 @@
   "dependencies": {
     "express": "4.17.1",
     "nodemon": "^2.0.15",
-    "sass": "^1.49.9"
+    "sass": "^1.49.9",
+    "socket.io": "2.2.0"
   },
   "scripts": {
     "start": "nodemon server.js"
