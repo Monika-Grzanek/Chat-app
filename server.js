@@ -32,10 +32,9 @@ io.on('connection', (socket) => {
     socket.broadcast.emit('message', message);
   });
   socket.on('disconnect', () => { 
-    const user = users.find(person => person.id === socket.id);
+    const user = users.find(person => person.idUser === socket.id);
     const index = users.indexOf(user);
-    socket.broadcast.emit('message', {author: 'Chat Bot', content: `${user} has left the conversation... :(`});
-    console.log('user', user);
+    socket.broadcast.emit('message', {author: 'Chat Bot', content: `${user.nameUser} has left the conversation... :(`});
     users.splice(index, 1);
     console.log('Oh, socket ' + socket.id + ' has left');
     console.log('My users:', users);
